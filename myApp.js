@@ -2,6 +2,14 @@ let express = require('express');
 require('dotenv').config();
 let app = express();
 
+// Solution 10
+app.route('/name').get(function(req, res) {
+	let first = req.query.getElementsByName('first');
+	let last = req.query.getElementsByName('last');
+	let full = first + last;
+	res.json({ name: full });
+});
+
 // Solution 9
 app.get('/:word/echo', function(req, res) {
 	let word = req.params.word;
