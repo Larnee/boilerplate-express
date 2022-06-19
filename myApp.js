@@ -6,7 +6,7 @@ let app = express();
 app.route('/name').get(function(req, res) {
 	let first = req.query.getElementsByName('first');
 	let last = req.query.getElementsByName('last');
-	let full = first + last;
+	let full = first + " " + last;
 	res.json({ name: full });
 });
 
