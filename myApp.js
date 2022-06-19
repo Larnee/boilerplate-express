@@ -3,7 +3,7 @@ require('dotenv').config();
 let app = express();
 
 // Solution 8
-app.get('/', function(req, res, next) {
+app.use('/', function(req, res, next) {
 	console.log(req.method + " " + req.path + " - " + req.ip); next();
 });
 
