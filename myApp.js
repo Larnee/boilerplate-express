@@ -2,6 +2,12 @@ let express = require('express');
 require('dotenv').config();
 let app = express();
 
+// Solution 9
+app.get('/:word/echo', function(req, res) {
+	let word = req.params.word;
+	res.json({ echo: word }); 
+});
+
 // Solution 8
 app.get('/now', function(req, res, next) {
 	req.time = new Date().toString();	
