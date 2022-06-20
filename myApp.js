@@ -13,6 +13,11 @@ app.route('/name').get(function(req, res) {
 	let last = req.query.last;
 	let full = first + " " + last;
 	res.json({ name: full });
+}).post(function(req, res){
+	let f = req.body.first;
+	let l = req.body.last;
+	let both = f + " " + l;
+	res.json({ name: both });
 });
 
 // Solution 9
