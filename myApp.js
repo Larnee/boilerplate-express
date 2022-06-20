@@ -5,7 +5,7 @@ let app = express();
 
 // Solution 11
 app.use(bodyParser.urlencoded({ extended: false }));
-bodyParser.json();
+app.use(bodyParser.json());
 
 // Solution 10
 app.route('/name').get(function(req, res) {
