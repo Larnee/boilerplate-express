@@ -1,6 +1,11 @@
+const bodyParser = require('body-parser');
 let express = require('express');
 require('dotenv').config();
 let app = express();
+
+// Solution 11
+app.use(bodyParser.urlencoded({ extended: false }));
+bodyParser.json();
 
 // Solution 10
 app.route('/name').get(function(req, res) {
