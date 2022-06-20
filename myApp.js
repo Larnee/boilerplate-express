@@ -7,7 +7,7 @@ let app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Solution 10
+// Solution 10 (get) & 12 (post)
 app.route('/name').get(function(req, res) {
 	let first = req.query.first;
 	let last = req.query.last;
