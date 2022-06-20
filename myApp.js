@@ -4,8 +4,8 @@ let app = express();
 
 // Solution 10
 app.route('/name').get(function(req, res) {
-	let first = req.query.getElementsByName('first');
-	let last = req.query.getElementsByName('last');
+	let first = req.query.first;
+	let last = req.query.last;
 	let full = first + " " + last;
 	res.json({ name: full });
 });
